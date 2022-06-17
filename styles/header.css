@@ -38,6 +38,7 @@
     top: 70px;
     list-style: none;
     transition: .4s linear;
+    background-color: var(--principal);
 }
 
 .navBar__categorys li a {
@@ -71,6 +72,7 @@
     right: -200%;
     width: 100%;
     flex-direction: column;
+    background-color: var(--principal); 
     transition: .4s linear;
     list-style: none;
 
