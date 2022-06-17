@@ -1,0 +1,121 @@
+.header {
+    font-size: .9rem;
+    width: 100vw;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    font-family: 'Signika', sans-serif;
+    z-index: 80;
+    background-color: var(--principal);
+}
+
+.navBar {
+    height: 100%;
+    margin: 0;
+    padding: 0 4em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.navBar__logo a {
+    color: #222222;
+    font-size: 1.6em;
+    font-weight: 500;
+    text-decoration: none;
+    transition: .4s ease;
+}
+
+.navBar__logo a:hover {
+    color: var(--secundary);
+}
+
+.navBar__categorys {
+    position: absolute;
+    width: 100vw;
+    right: -200%;
+    top: 70px;
+    list-style: none;
+    transition: .4s linear;
+}
+
+.navBar__categorys li a {
+    display: block;
+    color: #222222;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: 400;
+    padding: .5em 0;
+    cursor: pointer;
+    border-bottom: 1px solid var(--secundary_opacity);
+    text-decoration: none;
+}
+
+.navBar__categorys li a:hover,
+.navBar__categorys li a:focus {
+    background-color: var(--secundary_hover);
+}
+
+.navBar__categorys-classListContainer {
+    position: relative;
+}
+
+.navBar__category__classesList {
+    position: absolute;
+    font-size: .95em;
+    max-height: 180px;
+    overflow-y: scroll;
+    display: flex;
+    top: 100%;
+    right: -200%;
+    width: 100%;
+    flex-direction: column;
+    transition: .4s linear;
+    list-style: none;
+
+}
+
+.navBar__category__classesList li a {
+    text-align: left;
+    font-weight: 300;
+    padding-left: 6em;
+
+}
+
+.navBar__btnResponsiveNav {
+    background: none;
+    border: none;
+    color: #222222;
+    font-size: 1.6em;
+    padding: .05em .25em;
+    cursor: pointer;
+}
+
+.navBar__btnResponsiveNav:focus {
+    outline: 2px solid var(--secundary);
+}
+
+.show {
+    right: 0;
+}
+
+@media only screen and (min-width:768px) {
+    .header {
+        font-size: 1rem;
+    }
+
+    .navBar {
+        width: 60%;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .navBar__categorys {
+        width: 380px;
+    }
+
+    .navBar__category__classesList li a {
+        padding-left: 2em;
+    }
+}
