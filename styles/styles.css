@@ -1,8 +1,14 @@
 :root {
-    --principal: #f5fcff;
+    --principal: #fff;
+    --backgroundBody:#f0f6f6;
     --secundary: #e98c00;
     --secundary_hover: #ffc368;
     --secundary_opacity: #ffd699;
+    --secundary_opacityLight: #ffecd0;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 * {
@@ -11,7 +17,7 @@
 }
 
 body {
-    background-color: var(--principal);
+    background-color: var(--backgroundBody);
     overflow-x: hidden;
     padding-top: 70px;
 }

@@ -1,0 +1,47 @@
+.main {
+    font-size: .9rem;
+    width: 100vw;
+    padding: 2em 0;
+    font-family: 'Signika', sans-serif;
+
+}
+
+.mainContainer {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.mainContainer h2 {
+    font-size: 1.3em;
+    font-weight: 300;
+}
+
+.mainContainer h1 {
+    border-left: 6px solid var(--secundary);
+    padding: .2em 0;
+    padding-left: .5em;
+    font-size: 1.3em;
+    font-weight: 400;
+}
+
+@media only screen and (min-width:576px) and (max-width:768px) {
+    .main {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .main {
+        
+        font-size: 1rem;
+    }
+
+    .mainContainer {
+        width: 80%;
+        align-items: flex-start;
+    }
+}
