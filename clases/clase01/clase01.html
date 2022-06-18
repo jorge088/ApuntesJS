@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,13 +13,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-
-    <link rel="stylesheet" href="./../../styles/header.css">
     <link rel="stylesheet" href="./../../styles/styles.css">
+    <link rel="stylesheet" href="./../../styles/header.css">
+
     <link rel="stylesheet" href="./clase01.css">
     <title>Clase01 | Tutoria</title>
 </head>
-<body>
+
+<body class="dark">
     <header class="header">
         <nav class="navBar">
             <div class="navBar__logo">
@@ -51,13 +53,21 @@
 
                 </li>
             </ul>
-            <button class="navBar__btnResponsiveNav">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+            <div>
+                <button class="navBar__btnChangeTheme">
+                    <i id="sunIcon" class="fa-solid fa-sun "></i>
+                    <i id="moonIcon" class="fa-solid fa-moon hide"></i>
+                </button>
+                <button class="navBar__btnResponsiveNav">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
         </nav>
     </header>
     <p>CLASE1</p>
-    <p>Javascript es un lenguaje de programación que nos permite agregarle dinamismo a nuestros sitios web. Combinado con html y css podemos agregarle funcionalidades e interacciones muy grosas a nuestro sitio.</p>
+    <p>Javascript es un lenguaje de programación que nos permite agregarle dinamismo a nuestros sitios web. Combinado
+        con html y css podemos agregarle funcionalidades e interacciones muy grosas a nuestro sitio.</p>
     <script src="./../../scripts/shared.js"></script>
 </body>
+
 </html>

@@ -72,7 +72,7 @@
     right: -200%;
     width: 100%;
     flex-direction: column;
-    background-color: var(--principal); 
+    background-color: var(--principal);
     transition: .3s linear;
     list-style: none;
 
@@ -83,6 +83,23 @@
     font-weight: 300;
     padding-left: 6em;
 
+}
+
+.navBar__btnChangeTheme {
+    background: none;
+    border: none;
+    color: var(--text-star);
+    font-size: 1.4em;
+    cursor: pointer;
+    margin-right: .5em;
+    padding: .2em .6em;
+}
+.navBar__btnChangeTheme i.hide{
+    display: none;
+}
+.navBar__btnChangeTheme:hover{
+    outline: 2px solid var(--secundary);
+    border-radius: 10px;
 }
 
 .navBar__btnResponsiveNav {

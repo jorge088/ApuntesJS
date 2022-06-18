@@ -1,3 +1,4 @@
+
 const navLogo = document.querySelector('#navLogo');
 const mainContent = document.querySelector('#main');
 

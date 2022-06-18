@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,12 +13,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-
-    <link rel="stylesheet" href="./../../styles/header.css">
     <link rel="stylesheet" href="./../../styles/styles.css">
+    <link rel="stylesheet" href="./../../styles/header.css">
+
     <link rel="stylesheet" href="./clase03.css">
     <title>Clase03 | Tutoria</title>
 </head>
+
 <body>
     <header class="header">
         <nav class="navBar">
@@ -31,7 +33,7 @@
                 <li class="navBar__categorys-classListContainer">
                     <a href="#" class="navBar__classesLink">Clases</a>
                     <ul class="navBar__category__classesList">
-                        <li><a href="./../clase01/clase01.html" >1 - Syntaxis y variables</a></li>
+                        <li><a href="./../clase01/clase01.html">1 - Syntaxis y variables</a></li>
                         <li><a href="./../clase02/clase02.html">2 - Control de flujos</a></li>
                         <li><a href="#" id="actualClassPage">3 - Ciclos/iteraciones</a></li>
                         <li><a href="./../clase04/clase04.html">4 - Programacion con funciones</a></li>
@@ -51,12 +53,19 @@
 
                 </li>
             </ul>
-            <button class="navBar__btnResponsiveNav">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+            <div>
+                <button class="navBar__btnChangeTheme">
+                    <i id="sunIcon" class="fa-solid fa-sun "></i>
+                    <i id="moonIcon" class="fa-solid fa-moon hide"></i>
+                </button>
+                <button class="navBar__btnResponsiveNav">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
         </nav>
     </header>
     <p>CLASE3</p>
     <script src="./../../scripts/shared.js"></script>
 </body>
+
 </html>
