@@ -3,7 +3,7 @@
     width: 100vw;
     padding: 2em 0;
     font-family: 'Signika', sans-serif;
-
+    color:var(--text);
 }
 
 .mainContainer {
@@ -26,6 +26,7 @@
     padding-left: .5em;
     font-size: 1.3em;
     font-weight: 400;
+    color: var(--text-star);
 }
 
 @media only screen and (min-width:576px) and (max-width:768px) {

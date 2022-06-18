@@ -20,7 +20,7 @@
 }
 
 .navBar__logo a {
-    color: #222222;
+    color: var(--text-star);
     font-size: 1.6em;
     font-weight: 500;
     text-decoration: none;
@@ -43,7 +43,7 @@
 
 .navBar__categorys li a {
     display: block;
-    color: #222222;
+    color: var(--text-star);
     font-size: 1.2em;
     text-align: center;
     font-weight: 400;
@@ -88,7 +88,7 @@
 .navBar__btnResponsiveNav {
     background: none;
     border: none;
-    color: #222222;
+    color: var(--text-star);
     font-size: 1.6em;
     padding: .05em .25em;
     cursor: pointer;

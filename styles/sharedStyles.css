@@ -14,6 +14,7 @@
     text-align: center;
     padding: .4em 0;
     font-weight: 500;
+    color: var(--text-star);
 }
 .sectionInfo__block{
     display: flex;
@@ -23,7 +24,8 @@
 .sectionInfo__block__title{
     font-size: 1.4em;
     font-weight: 600;
-    background-color: var(--secundary_opacityLight);
+    color: var(--text-star);
+    background-color: var(--secundary_opacity-star);
     padding: .4em 0;
     padding-left: .8em;
     border-left: 5px solid var(--secundary);
@@ -42,6 +44,7 @@
 .sectionInfo__block p{
     font-size: 1.3em;
     font-weight: 300;
+    color: var(--text-star);
 }
 .sectionInfo__block p.titleVideo{
     text-align: center;

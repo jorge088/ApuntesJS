@@ -4,9 +4,29 @@
     --secundary: #e98c00;
     --secundary_hover: #ffc368;
     --secundary_opacity: #ffd699;
-    --secundary_opacityLight: #ffecd0;
+    --secundary_opacity-star: #ffecd0;
+    --text:#222222;
+    --text-star: #000;
+
+
+    --principal-dark:#2d2f31;
+    --backgroundBody-dark:#393e41;
+    --text-dark: #dcd8d8;
+    --text-star-dark:#fff;
+    --secundary_opacity-star-dark:#5a6266;
+    --secundary_hover: #dba656;
 }
 
+@media(prefers-color-scheme: dark) {
+    :root{
+        --principal:var(--principal-dark);
+        --backgroundBody:var(--backgroundBody-dark);
+
+        --text:var(--text-dark);
+        --text-star:var(--text-star-dark);
+        --secundary_opacity-star: var(--secundary_opacity-star-dark);
+    }
+}
 html{
     scroll-behavior: smooth;
 }
