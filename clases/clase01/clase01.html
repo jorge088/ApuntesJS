@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./../../styles/styles.css">
+    <link rel="stylesheet" href="./../../styles/sharedStyles.css">
     <link rel="stylesheet" href="./../../styles/header.css">
 
     <link rel="stylesheet" href="./clase01.css">
@@ -64,9 +65,89 @@
             </div>
         </nav>
     </header>
-    <p>CLASE1</p>
-    <p>Javascript es un lenguaje de programación que nos permite agregarle dinamismo a nuestros sitios web. Combinado
-        con html y css podemos agregarle funcionalidades e interacciones muy grosas a nuestro sitio.</p>
+    <section class="sectionInfo">
+        <h3 class="upperTitle">Un poco de repaso</h3>
+        <div class="sectionInfo__block">
+            <h3 class="sectionInfo__block__title">Variables</h3>
+            <p>Las variables son un espacio reservado de memoria que lo usaremos para guardar datos. Puedes pensar que
+                es una caja a la que le ponemos un nombre y la usamos para guardar un valor.</p>
+            <p>Para definir las variables en js se usan las palabras var, let y const. Para declararlas (asignarles un
+                valor) se usa el signo = .</p>
+            <span class="sectionInfo__block__code">
+                <p><span class="specialWord">var</span> nombre <span class="specialWord">=</span> "Pedro" ;</p>
+                <p><span class="specialWord">let</span> numero <span class="specialWord">=</span> 4 ;</p>
+                <p><span class="specialWord">const</span> PI <span class="specialWord">=</span> 3,14 ;</p>
+            </span>
+            <p>JavaScript es un lenguaje débilmente tipado y dinámico. Esto quiere decir que las variables no están
+                asociadas a un tipo especifico, es por eso que en js cuando definimos una variable no se define el tipo
+                de valor que contiene.</p>
+            <span class="sectionInfo__block__list">
+                <h4>Recuerda</h4>
+                <ul>
+                    <li>Utilizar let en lugar de var, porque tiene un alcance de bloque y esto nos evitará posibles
+                        problemas.</li>
+                    <li>Las variables de tipo const no pueden cambiar su valor luego de ser declaradas.</li>
+                    <li>Usar nombres descriptivos para las variables. Si estas calculando el area de un triangulo es
+                        mejor nombrar a las variables como base, altura en lugar de a, b .</li>
+                    <li>Es buena practica definir las variables al principio del archivo js, para que sea más facil leer
+                        el codigo.</li>
+                </ul>
+            </span>
+            <p>Si quieres leer más, te dejo estos posts sobre variables:</p>
+            <a href="https://medium.com/@tatymolys/var-let-y-const-donde-cuando-y-por-qu%C3%A9-d4a0ee66883b"
+                target="_blank">Var, let y const. ¿Donde, cuando y por qué?</a>
+            <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Data_structures">Tipos de datos y estructuras
+                en javascript</a>
+        </div>
+        <div class="sectionInfo__block">
+            <h3 class="sectionInfo__block__title">Consola y Alertas</h3>
+            <p>La consola nos será muy útil para mostrar datos, información, descubrir errores, etc. Puedes usar la
+                consola del Visual Studio Code o la de tu navegador.</p>
+            <p>Para mostrar datos por consola se usa la sentencia <span class="specialWord">console.log()</span>.</p>
+            <span class="sectionInfo__block__code">
+                <p><span class="specialWord">let</span> nombre <span class="specialWord"> = </span>"Diego";</p>
+                <p><span class="specialWord">console.log(</span> 25 <span class="specialWord">)</span>; <span
+                        class="coment"> // 25</span></p>
+                <p><span class="specialWord">console.log(</span> "Hola mundo" <span class="specialWord">)</span>; <span
+                        class="coment"> // Hola mundo</span></p>
+                <p><span class="specialWord">console.log(</span> nombre <span class="specialWord">)</span>; <span
+                        class="coment"> // Diego</span></p>
+            </span>
+            <p>Para ingresar datos se usa la sentencia <span class="specialWord">prompt()</span>. Dentro de los
+                paréntesis se agrega el mensaje que se mostrará junto con un input. Recordá que todo lo que ingresa en
+                un prompt es una cadena de texto. Si pedis que ingresen numeros y luego vas a realizar operaciones con
+                ellos, primero tenes que usar <span class="specialWord">parseInt()</span> para transformar el el texto
+                en enteros.</p>
+            <span class="sectionInfo__block__code">
+                <p><span class="specialWord">let</span> nombre <span class="specialWord"> = </span><span
+                        class="specialWord">prompt(</span>"Ingrese su nombre"<span class="specialWord">)</span>;</p>
+                <p><span class="specialWord">let</span> nota <span class="specialWord"> =<span class="specialWord">parseInt(</span>  </span><span
+                        class="specialWord">prompt(</span>"Ingrese la nota del primer examen."<span class="specialWord">) )</span>;</p>
+            </span>
+            <p>Por ultimo, si queremos mostrar informacion o un mensaje se usa la sentencia <span class="specialWord">alert()</span>. Muestra una ventana flotante sobre nuestra pagina con un mensaje que queremos mostrar.</p>
+            <span class="sectionInfo__block__code">
+                <p><span class="specialWord">alert(</span>"Hola mundo"<span class="specialWord">)</span>;</p>
+            </span>
+        </div>
+    </section>
+    <section class="sectionInfo">
+        <h3 class="upperTitle">Practica</h3>
+        <div class="sectionInfo__block">
+            <h3 class="sectionInfo__block__title">Ejercicio 1</h3>
+            <p>Crear un script en js que solicite al usuario ingresar su nombre, apellido y edad. Luego mostrar por consola o alert su nombre completo con la edad, ejemplo: "Su nombre es Diego Perez, 20 años"</p>
+            <span class="sectionInfo__block__practiceBtns">
+                <a href="https://stackblitz.com/edit/js-fvx3mp?file=index.js" target="_blank">Ver codigo</a>
+            </span>
+        </div>
+        <div class="sectionInfo__block">
+            <h3 class="sectionInfo__block__title">Ejercicio 2</h3>
+            <p>Crear un script en js que solicite al usuario el ingreso de 3 notas de examenes, luego mostrar por consola o alert el promedio de las 3 notas.Ejemplo: "El promedio es: 7"</p>
+            <span class="sectionInfo__block__practiceBtns">
+                <a href="https://stackblitz.com/edit/js-wxdmko?file=index.js" target="_blank">Ver codigo</a>
+            </span>
+        </div>
+    </section>
+
     <script src="./../../scripts/shared.js"></script>
 </body>
 

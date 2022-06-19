@@ -12,6 +12,7 @@ body {
     --backgroundBody: #f0f6f6;
     --text: #222222;
     --text-star: #000;
+    --text-coment:rgb(63, 63, 63);
     --secundary_opacity-star: #ffecd0;
     --secundary_hover: #ffc368;
     --secundary: #e98c00;
@@ -28,6 +29,7 @@ body.dark {
     --backgroundBody: #393e41;
     --text: #dcd8d8;
     --text-star: #fff;
+    --text-coment: rgb(158, 158, 158);
     --secundary_opacity-star: #5a6266;
     --secundary_hover: #dba656;
 }

@@ -54,6 +54,36 @@
     height: 280px;
     align-self: center;
 }
+.sectionInfo__block__code{
+    padding-left: 2em;
+}
+
+.sectionInfo__block__code p {
+}
+
+.specialWord{
+    color: var(--secundary);
+}
+.coment{
+    color: var(--text-coment);
+}
+.sectionInfo__block__list{
+    color: var(--text);
+
+}
+.sectionInfo__block__list h4{
+    color: var(--text-star);
+    font-size: 1.3em;
+    margin-bottom: .4em;
+}
+.sectionInfo__block__list ul{
+    padding-left: 1em;
+    font-size: 1.3em;
+    display: flex;
+    flex-direction: column;
+    gap: .4em;
+}
+
 @media only screen and (min-width:576px) and (max-width:768px) {
     .sectionInfo{
         font-size: 1rem;
