@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./../../styles/styles.css">
+    <link rel="stylesheet" href="./../../styles/sharedStyles.css">
     <link rel="stylesheet" href="./../../styles/header.css">
 
     <link rel="stylesheet" href="./clase03.css">
@@ -64,7 +65,76 @@
             </div>
         </nav>
     </header>
-    <p>CLASE3</p>
+    <section class="sectionInfo">
+        <h3 class="upperTitle">Un poco de repaso</h3>
+        <div class="sectionInfo__block">
+            <h3 class="sectionInfo__block__title">Ciclos</h3>
+            <p>Los ciclos son estructuras que nos permiten repetir operaciones. Estas repeticiones pueden ser una
+                cantidad de veces definidas o pueden estar sujetas a alguna condición.</p>
+            <h4>Estructura For</h4>
+            <p>Este ciclo se repite hasta que una condición se evalúe como False. Su estructura es: </p>
+            <span class="sectionInfo__block__code">
+                <p><span class="specialWord">for (</span>ExpresionInicial <span class="specialWord">;
+                    </span>expresionCondicional <span class="specialWord">; </span>ExpresiónDeActualizacion <span
+                        class="specialWord">) {</span></p>
+                <p><span class="coment">// Codigo que se ejecuta si la condición es True</span></p>
+                <p><span class="specialWord">}</span></p>
+            </span>
+            <p>Cuando se ejecuta un ciclo For, ocurre: </p>
+            <span class="sectionInfo__block__list">
+                <ul>
+                    <li>ExpresionInicial: Primero, se ejecuta la expresión inicial, en esta expresión normalmente se
+                        define e inicia un contador de bucle. Se suele usar la letra <span class="specialWord">i</span>
+                        para definir el contador. </li>
+                    <li>ExpresionCondicional: Segundo, se evalúa la expresion condicional. Si el valor de la condición
+                        es True, se ejecuta el codigo dentro del ciclo. Si el valor de la condición es False, la
+                        ejecución del ciclo termina.</li>
+                    <li>ExpresionDeActualizacion: Luego de ejecutar el codigo dentro del ciclo. Se ejecuta la expresión
+                        de actualización del contador y vuelve a ejecutarse el ciclo.</li>
+                </ul>
+            </span>
+            <h4>Estructura While</h4>
+            <p>El ciclo while nos permite repetir intrucciones siempre que una condición especificada se evalúe como
+                True. Su estructura es:</p>
+            <span class="sectionInfo__block__code">
+                <p><span class="specialWord">while(</span> condición <span class="specialWord">) {</span></p>
+                <p><span class="coment">// Codigo que se ejecuta si la condición es True</span></p>
+                <p><span class="specialWord">}</span></p>
+            </span>
+            <p>Primero se ejecuta la <span class="specialWord">condicion</span> del while. Si se evalúa como True, se
+                ejecutara el codigo dentro del bucle y se repetirá mientras la condición sea True. Si la condición
+                evaluada resulta False, el ciclo se termina.</p>
+            <span class="sectionInfo__block__list">
+                <ul>
+                    <li>Luego de ejecutar todo el codigo dentro del ciclo, se vuelve a evaluar la condición.</li>
+                    <li>Recordá definir dentro del ciclo un control para finalizar su ejecución. Es muy facil generar un
+                        bucle infinito... <span class="specialWord">Muy importante</span></li>
+                </ul>
+            </span>
+            <h4>Estructura Do While</h4>
+            <p>El ciclo Do While nos permite repetir instrucciones de codigo por lo menos una vez y mientras una
+                condición sea True. Es parecio al While, pero este se ejecuta si o si una vez. Su estructura es: </p>
+            <span class="sectionInfo__block__code">
+                <p><span class="specialWord">do {</span></p>
+                <p><span class="coment">// Codigo que se ejecuta dentro del ciclo</span></p>
+                <p><span class="specialWord">} while(</span> condicion <span class="specialWord">)</span></p>
+            </span>
+            <p>Al ejecutarse un Do While, primero se ejecuta el codigo que contiene y luego se evalúa la condición. Si
+                la condición es True, se repite el ciclo. Si la condición es False, se termina el ciclo.</p>
+            <span class="sectionInfo__block__list">
+                <ul>
+                    <li>Al igual que while, recuerda definir un control de salida del ciclo, para evitar un bucle infinito.</li>
+                </ul>
+            </span>
+            <p>Si querés leer más sobre los ciclos, te dejo este link:</p>
+        <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Loops_and_iteration#declaracion_for" target="_blank">Ciclos e Iteraciones</a>
+        </div>
+        
+        <div class="sectionInfo__block">
+            <h3 class="sectionInfo__block__title">Switch</h3>
+        </div>
+        
+    </section>
     <script src="./../../scripts/shared.js"></script>
 </body>
 

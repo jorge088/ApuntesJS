@@ -1,5 +1,4 @@
-
-.sectionInfo{
+.sectionInfo {
     font-size: .9rem;
     font-family: 'Signika', sans-serif;
     width: 90%;
@@ -9,19 +8,22 @@
     flex-direction: column;
     gap: 1em;
 }
-.upperTitle{
+
+.upperTitle {
     font-size: 1.6em;
     text-align: center;
     padding: .4em 0;
     font-weight: 500;
     color: var(--text-star);
 }
-.sectionInfo__block{
+
+.sectionInfo__block {
     display: flex;
     flex-direction: column;
     gap: .8em;
 }
-.sectionInfo__block__title{
+
+.sectionInfo__block__title {
     font-size: 1.4em;
     font-weight: 600;
     color: var(--text-star);
@@ -30,7 +32,15 @@
     padding-left: .8em;
     border-left: 5px solid var(--secundary);
 }
-.sectionInfo__block a{
+
+.sectionInfo__block h4 {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: var(--text-star);
+    text-align: center;
+}
+
+.sectionInfo__block a {
     font-size: 1.3em;
     width: fit-content;
     font-weight: 400;
@@ -38,45 +48,53 @@
     color: var(--secundary);
     text-decoration: none;
 }
-.sectionInfo__block a:hover{
+
+.sectionInfo__block a:hover {
     text-decoration: underline;
 }
-.sectionInfo__block p{
+
+.sectionInfo__block p {
     font-size: 1.3em;
     font-weight: 300;
     color: var(--text-star);
 }
-.sectionInfo__block p.titleVideo{
+
+.sectionInfo__block p.titleVideo {
     text-align: center;
 }
-.sectionInfo__block iframe{
+
+.sectionInfo__block iframe {
     width: 350px;
     height: 280px;
     align-self: center;
 }
-.sectionInfo__block__code{
+
+.sectionInfo__block__code {
     padding-left: 2em;
 }
 
-.sectionInfo__block__code p {
-}
+.sectionInfo__block__code p {}
 
-.specialWord{
+.specialWord {
     color: var(--secundary);
 }
-.coment{
+
+.coment {
     color: var(--text-coment);
 }
-.sectionInfo__block__list{
+
+.sectionInfo__block__list {
     color: var(--text);
 
 }
-.sectionInfo__block__list h4{
+
+.sectionInfo__block__list h4 {
     color: var(--text-star);
     font-size: 1.3em;
     margin-bottom: .4em;
 }
-.sectionInfo__block__list ul{
+
+.sectionInfo__block__list ul {
     padding-left: 1em;
     font-size: 1.3em;
     display: flex;
@@ -86,16 +104,18 @@
 }
 
 @media only screen and (min-width:576px) and (max-width:768px) {
-    .sectionInfo{
+    .sectionInfo {
         font-size: 1rem;
     }
 }
+
 @media only screen and (min-width:768px) {
-    .sectionInfo{
+    .sectionInfo {
         width: 80%;
         font-size: 1rem;
     }
-    .sectionInfo__block iframe{
+
+    .sectionInfo__block iframe {
         width: 500px;
         height: 280px;
     }
