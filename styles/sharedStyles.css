@@ -81,6 +81,7 @@
     font-size: 1.3em;
     display: flex;
     flex-direction: column;
+    margin-bottom: .4em;
     gap: .4em;
 }
 

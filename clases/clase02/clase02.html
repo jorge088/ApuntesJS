@@ -68,9 +68,160 @@
     <section class="sectionInfo">
         <h3 class="upperTitle">Un poco de repaso</h3>
         <div class="sectionInfo__block">
-            <h3 class="sectionInfo__block__title">
+            <h3 class="sectionInfo__block__title">Condicionales</h3>
+            <p>El codigo que escribimos en js se ejecuta de arriba hacia abajo, podriamos decir que en linea recta. En
+                los lenguajes de programación existen escructuras llamadas CONDICIONALES, estas estructuras nos permiten
+                tomar decisiones en base a una condición que definimos. Con estas estructuras podremos tomar distintos
+                caminos durante la ejecución del codigo.</p>
+            <p>Para tomar estas decisiones se usan las variables de tipo <span class="specialWord">Booleano</span>. Este
+                tipo de variable solo puede tomar 2 valores: <span class="specialWord">true</span> o <span
+                    class="specialWord">false</span>.</p>
+            <span class="sectionInfo__block__code">
+                <p><span class="specialWord">let</span> valorValido <span class="specialWord"> = </span> false; <span
+                        class="coment">// False</span></p>
+                <p><span class="specialWord">let</span> mayorDeDiez <span class="specialWord"> = </span> ( 5 + 7 ) > 10;
+                    <span class="coment">// True</span>
+                </p>
+            </span>
+            <p>La estructura condicional más usada es el <span class="specialWord">if</span> su estructura es: </p>
+            <span class="sectionInfo__block__code">
+                <p><span class="specialWord">if</span> (condición) <span class="specialWord">{</span></p>
+                <p><span class="coment">//codigo que ejecuta si condición es True</span></p>
+                <p><span class="specialWord">}</span></p>
+            </span>
+            <p>Solamente se ejecutará el bloque de codigo dentro de las llaves, si la condición es true.</p>
+            <p>Tambien se puede usar la extructura <span class="specialWord">if else</span>. Que ejecutará uno y otro
+                bloque de codigo según la condición es True o False.</p>
+            <span class="sectionInfo__block__code">
+                <p><span class="specialWord">if</span> (condición) <span class="specialWord">{</span></p>
+                <p><span class="coment">//codigo que ejecuta si condición es True</span></p>
+                <p><span class="specialWord">} else {</span></p>
+                <p><span class="coment">//codigo que ejecuta si condición es False</span></p>
+                <p><span class="specialWord">} </span></p>
+            </span>
 
-            </h3>
+        </div>
+        <div class="sectionInfo__block">
+            <h3 class="sectionInfo__block__title">Operadores</h3>
+            <p>Los operadores en los lenguajes de programación son simbolos que nos permiten realizar distintas
+                operaciones.</p>
+            <p class="titleVideo">Tipos de operadores</p>
+            <span class="sectionInfo__block__list">
+                <h4>Operadores aritmeticos</h4>
+                <ul>
+                    <li>Suma: 3<span class="specialWord"> + </span>5 <span class="coment">// 8</span>. "hola" <span
+                            class="specialWord"> + </span> "mundo" <span class="coment">// "Holamundo"</span>.</li>
+                    <li>Resta: 5 <span class="specialWord"> - </span> 2 <span class="coment">// 3</span>.</li>
+                    <li>Negativo: <span class="specialWord">-</span>5 <span class="coment">// -5</span>.</li>
+                    <li>División: 20 <span class="specialWord"> / </span> 4 <span class="coment">// 5</span>.</li>
+                    <li>Modulo Aritmetico: 7 <span class="specialWord"> % </span> 4 <span class="coment">// 3</span>.
+                    </li>
+                    <li>Multiplicación: 4 <span class="specialWord">*</span> 4 <span class="coment">// 16</span>.</li>
+                    <li>Incrementos y Decrementos: <span class="specialWord">++</span> , <span
+                            class="specialWord">--</span> .</li>
+                </ul>
+            </span>
+            <span class="sectionInfo__block__list">
+                <h4>Operadores de Comparación</h4>
+                <p>Estos operadores nos van a devolver como resultado un valor Booleano</p>
+                <ul>
+                    <li>Igualdad: <span class="specialWord"> == </span> <span class="coment">// iguales en valor, pueden
+                            ser distintos tipos de datos</span></li>
+                    <li>Igualda Estricta: <span class="specialWord"> === </span> <span class="coment">// iguales en
+                            valor y en tipo de dato</span></li>
+                    <li>Desigualdad: <span class="specialWord"> != </span></li>
+                    <li>Desigualdad Estricta: <span class="specialWord"> !== </span></li>
+                    <li>Mayor que: <span class="specialWord"> > </span></li>
+                    <li>Mayor o igual que: <span class="specialWord"> >= </span></li>
+                    <li>Menor que: <span class="specialWord">
+                            < </span>
+                    </li>
+                    <li>Menor o igual que: <span class="specialWord">
+                            <= </span>
+                    </li>
+                </ul>
+            </span>
+            <span class="sectionInfo__block__list">
+                <h4>Operadores de Asignación</h4>
+                <ul>
+                    <li>Asignación Simple: <span class="specialWord"> = </span></li>
+                </ul>
+                <p>Ademas el operador de asignación puede combinarse con los operadores aritmeticos para obtener los
+                    siguientes operadores:</p>
+                <ul>
+                    <li>a <span class="specialWord"> += </span> b. <span class="coment">// Equivale: a = a + b</span>
+                    </li>
+                    <li>a <span class="specialWord"> -= </span> b. <span class="coment">// Equivale: a = a - b</span>
+                    </li>
+                    <li>a <span class="specialWord"> /= </span> b. <span class="coment">// Equivale: a = a / b</span>
+                    </li>
+                    <li>a <span class="specialWord"> *= </span> b. <span class="coment">// Equivale: a = a * b</span>
+                    </li>
+                    <li>a <span class="specialWord"> %= </span> b. <span class="coment">// Equivale: a = a % b</span>
+                    </li>
+                </ul>
+            </span>
+            <span class="sectionInfo__block__list">
+                <h4>Operadores de Logicos</h4>
+                <p>Estos operadores van a comparar valores Booleanos y nos van a devolver un valor Booleano </p>
+                <ul>
+                    <li>Negación Lógica (not): <span class="specialWord"> ! </span> <span class="coment">// Lo que hace
+                            es asignar el valor contrario. Si es True, lo cambia a False y viceversa</span>.</li>
+                    <li>Conjunción Lógica (and): <span class="specialWord"> && </span> <span class="coment">// Solo
+                            devuelve true, si ambas expresiones son true. De lo contrario devuelve False</span>.</li>
+                    <li>Disyunción Lógica (or): <span class="specialWord"> || </span><span class="coment">// Devuelve
+                            True si al menos una de las expresiones es True. Devuelve False cuando ambas sean
+                            False</span>.</li>
+                </ul>
+            </span>
+            <p>Si queres leer más sobre operadores, te dejo estos links:</p>
+            <a href="https://es.javascript.info/logical-operators" target="_blank">Operadores Logicos de javascript</a>
+            <a href="https://www.uv.es/jac/guia/jscript/javascr04.htm" target="_blank">Operadores de javascript</a>
+        </div>
+    </section>
+    <section class="sectionInfo">
+        <h3 class="upperTitle">Practica</h3>
+
+        <div class="sectionInfo__block">
+            <h3 class="sectionInfo__block__title">Editor online para que practiques</h3>
+            <iframe height="300" style="width: 100%;" scrolling="no" title="practica"
+                src="https://codepen.io/jorge_088/embed/preview/YzeMdyR?default-tab=html%2Cresult&editable=true&theme-id=dark"
+                frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/jorge_088/pen/YzeMdyR">
+                    practica</a> by Jorge (<a href="https://codepen.io/jorge_088">@jorge_088</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+        </div>
+        <div class="sectionInfo__block">
+            <h3 class="sectionInfo__block__title">Ejercicio 1</h3>
+            <p>Crear un codigo que solicite al usuario que ingrese 1 numero. Luego mostrar en un alert si el numero es
+                mayor que 30.</p>
+            <span class="sectionInfo__block__practiceBtns">
+                <a href="https://codepen.io/jorge_088/pen/XWZQGqj" target="_blank">Ver codigo</a>
+            </span>
+        </div>
+        <div class="sectionInfo__block">
+            <h3 class="sectionInfo__block__title">Ejercicio 2</h3>
+            <p>Crear un codigo que solicite al usuario que ingrese 2 números. Luego mostrar en un alert cual número es
+                el mayor, juntos con su valor. Si los números ingresados son iguales, mostrar en el alert el
+                mensaje "Los números ingresados son iguales".</p>
+            <span class="sectionInfo__block__practiceBtns">
+                <a href="https://codepen.io/jorge_088/pen/oNEOVyo" target="_blank">Ver codigo</a>
+            </span>
+        </div>
+        <div class="sectionInfo__block">
+            <h3 class="sectionInfo__block__title">Ejercicio 3</h3>
+            <p>Vamos a simular un login. Definir una variable de nombre 'user' y asignarle un nombre de usuario, luego
+                definir una variable de nombre 'password' y asignarle un valor. </p>
+            <p>Solicitar al usuario que ingrese su nombre de usuario y contraseña. Comparar los valores ingresados con
+                los definidos en las variables y mostrar por alert si los datos son correctos o incorrectos.</p>
+            <span class="sectionInfo__block__practiceBtns">
+                <a href="https://codepen.io/jorge_088/pen/oNEOVJE" target="_blank">Ver codigo</a>
+            </span>
+        </div>
+        <div class="sectionInfo__block">
+            <h3 class="sectionInfo__block__title">Más ejercicios</h3>
+            <p>Recuerda que en el Booklet hay más ejercicios para que puedas practicar.</p>
         </div>
     </section>
 
