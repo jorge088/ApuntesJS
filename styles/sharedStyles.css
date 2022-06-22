@@ -70,10 +70,13 @@
 }
 
 .sectionInfo__block__code {
-    padding-left: 2em;
+    margin-left: 2em;
+}
+.sectionInfo__block__code__sub{
+    display: block;
+    margin-left: 1em;
 }
 
-.sectionInfo__block__code p {}
 
 .specialWord {
     color: var(--secundary);

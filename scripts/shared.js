@@ -57,4 +57,9 @@ const checkLocalStorageTheme = () => {
 
     }
 }
-
+let cont=0;
+for(let i=0 ;i<=26;i++){
+    if(i%2 != 0) continue
+    cont++;
+}
+console.log("contador",cont);

@@ -123,17 +123,118 @@
                 la condición es True, se repite el ciclo. Si la condición es False, se termina el ciclo.</p>
             <span class="sectionInfo__block__list">
                 <ul>
-                    <li>Al igual que while, recuerda definir un control de salida del ciclo, para evitar un bucle infinito.</li>
+                    <li>Al igual que while, recuerda definir un control de salida del ciclo, para evitar un bucle
+                        infinito.</li>
                 </ul>
             </span>
             <p>Si querés leer más sobre los ciclos, te dejo este link:</p>
-        <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Loops_and_iteration#declaracion_for" target="_blank">Ciclos e Iteraciones</a>
+            <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Loops_and_iteration#declaracion_for"
+                target="_blank">Ciclos e Iteraciones</a>
+            <h4>Break y Continue</h4>
+            <p>Existen sentencias que nos permiten alterar la ejecución de los ciclos. Estas son el <span
+                    class="specialWord">break</span> y <span class="specialWord">continue</span></p>
+            <p>El <span class="specialWord">break</span> es una sentencia que finaliza la ejecución del ciclo que lo
+                contiene. Entonces si lo agregas dentro de un ciclo for, cuando se ejecute el break, el for se termina
+                sin importar si aún podia seguir repitiendose. Es muy útil usarlo cuando se cumple alguna condición
+                prohibida y queremos finalizar un ciclo. Por ejemplo, estamos pidiendo datos al usuario y hay un limite
+                de intentos, cuando el usuario exceda los limites se ejecuta el break y finaliza la petición.</p>
+            <p>El <span class="specialWord">continue</span> es una sentencia que saltea la repetición del ciclo y sigue
+                con la siguiente. Si lo usas en un ciclo for cuando se ejecute el continue, se finaliza esa repetición e
+                inicia una nueva, con el contador del for actualizado. Un uso practico sería usarlo cuando no queremos
+                tratar algunos casos especificos, </p>
+            <p>Supongamos que queremos mostrar todos los numeros pares entre 0 y 20. Se utiliza el
+                <span class="specialWord">continue</span> para omitir los numeros impares
+            </p>
+            <span class="sectionInfo__block__code">
+                <p><span class="specialWord">for (</span>let i = 0 <span class="specialWord">;
+                    </span>i <= 20 <span class="specialWord">;
+            </span>i++ <span class="specialWord">) {</span></p>
+            <span class="sectionInfo__block__code__sub">
+                <p>if( i % 2 !== 0 ) { <span class="coment"> // Si el resto de dividir el valor de i por 2 es distinto
+                        de cero, es porque es un numero impar</span></p>
+                <span class="sectionInfo__block__code__sub">
+                    <p><span class="specialWord">continue</span>;</p>
+                </span>
+                <p>}</p>
+                <p>console.log( `Numero par: ${ i }` );</p>
+            </span>
+            <p><span class="specialWord">}</span></p>
+            </span>
+
         </div>
-        
+
         <div class="sectionInfo__block">
             <h3 class="sectionInfo__block__title">Switch</h3>
+            <p>La estructura switch está diseñada para manejar diferentes condiciones. Tiene una expresion y varios
+                casos definidos que se ejecutaran según el valor de la expresion. La estructura del switch es:</p>
+            <span class="sectionInfo__block__code">
+                <p><span class="specialWord">switch (</span> expresion <span class="specialWord">) {</span></p>
+                <span class="sectionInfo__block__code__sub">
+                    <p><span class="specialWord">case</span> 1 <span class="specialWord">: </span></p>
+                    <span class="sectionInfo__block__code__sub">
+                        <p><span class="coment">//codigo que ejecuta el caso 1</span></p>
+                        <p><span class="specialWord">break;</span></p>
+                    </span>
+                    <p><span class="specialWord">case</span> 2 <span class="specialWord">: </span></p>
+                    <span class="sectionInfo__block__code__sub">
+                        <p><span class="coment">//codigo que ejecuta el caso 2</span></p>
+                        <p><span class="specialWord">break;</span></p>
+                    </span>
+                    <p><span class="specialWord">case</span> 3 <span class="specialWord">: </span></p>
+                    <span class="sectionInfo__block__code__sub">
+                        <p><span class="coment">//codigo que ejecuta el caso 3</span></p>
+                        <p><span class="specialWord">break;</span></p>
+                    </span>
+                    <p><span class="specialWord">default :</span> </p>
+                    <span class="sectionInfo__block__code__sub">
+                        <p><span class="coment">//codigo que ejecuta el caso default, si ninguno de los casos coincide
+                                con la expresión</span></p>
+                        <p><span class="specialWord">break;</span></p>
+                    </span>
+                </span>
+                <p><span class="specialWord">}</span></p>
+            </span>
+            <p>Cuando se ejecuta el switch, se evalúa la expresión y se la iguala de forma estricta "===" con los
+                diferentes casos definidos. Si la expresión es igual a alguno de los casos, entonces se va a ejecutar el
+                codigo que contiene ese caso, luego se ejecuta la sentencia break que termina el switch. Si ninguno de
+                los cases es igual a la expresión, se ejecuta el caso <span class="specialWord">default</span>.</p>
+            <p>Un ejemplo de su uso sería cuando mostramos un menu de opciones al usuario y le pedimos que elija una
+                opción. Podemos decirle que escriba el numero o nombre de la opción y usar un switch para ejecutar algo
+                según la opción que ingrese.</p>
         </div>
-        
+
+    </section>
+    <section class="sectionInfo">
+        <h3 class="upperTitle">Practica</h3>
+        <div class="sectionInfo__block">
+            <h3 class="sectionInfo__block__title">Editor online para que practiques</h3>
+            <iframe height="300" style="width: 100%;" scrolling="no" title="practica"
+                src="https://codepen.io/jorge_088/embed/preview/YzeMdyR?default-tab=html%2Cresult&editable=true&theme-id=dark"
+                frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/jorge_088/pen/YzeMdyR">
+                    practica</a> by Jorge (<a href="https://codepen.io/jorge_088">@jorge_088</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+        </div>
+        <div class="sectionInfo__block">
+            <h3 class="sectionInfo__block__title">Ejercicio 1</h3>
+            <p>Utilizando el ciclo for. Realice un programa que le pida un numero(positivo) al usuario, luego muestre un mensaje que diga cuantos numeros pares hay desde el cero al numero ingresado (cuente al cero como numero par). Si quieres un plus, agregale validaciones (si no ingresa un numero o ingresa un numero negativo, mostrar un mensaje de error). Ejemplo: El usuario ingresa el 26, el mensaje dirá "Hay 14 numeros pares entre 0 y 26"</p>
+            <span class="sectionInfo__block__practiceBtns">
+                <a href="https://codepen.io/jorge_088/pen/poaXVQE" target="_blank">Ver codigo</a>
+            </span>
+        </div>
+        <div class="sectionInfo__block">
+            <h3 class="sectionInfo__block__title">Ejercicio 2</h3>
+            <p>Ahora vamos a usar ciclo While o Do While. Le pongamos un poco más de onda al enunciado.</p>
+            <p>Existe un personaje llamado Corki, que tiene 100 de vida. El usuario va a atacarlo, le vamos a pedir que ingrese cuanto de vida quiere quitarle hasta que Corki tenga su vida igual a cero. Cada vez que el usuario dañe a Corki, mostrar un alerta con su vida restante. Si el usuario ingresa un numero mayor o igual a la vida de Corki, su vida queda en cero. Cuando Corki se quede sin vida mostrar un aleta que diga "Corki ha muerto :/". Las validaciones son opcionales ;). </p>
+            <span class="sectionInfo__block__practiceBtns">
+                <a href="https://codepen.io/jorge_088/pen/dydBeBQ" target="_blank">Ver codigo</a>
+            </span>
+        </div>
+        <div class="sectionInfo__block">
+            <h3 class="sectionInfo__block__title">Más ejercicios</h3>
+            <p>Recuerda que en el Booklet hay más ejercicios para que puedas practicar.</p>
+        </div>
     </section>
     <script src="./../../scripts/shared.js"></script>
 </body>
