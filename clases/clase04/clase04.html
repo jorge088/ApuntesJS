@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,13 +13,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" href="./../../styles/styles.css">
-
+    <link rel="stylesheet" href="./../../styles/styles.css">
+    <link rel="stylesheet" href="./../../styles/sharedStyles.css">
     <link rel="stylesheet" href="./../../styles/header.css">
     <link rel="stylesheet" href="./clase04.css">
     <title>Clase04 | Tutoria</title>
 </head>
-<body >
+
+<body class="dark">
     <header class="header">
         <nav class="navBar">
             <div class="navBar__logo">
@@ -31,13 +33,13 @@
                 <li class="navBar__categorys-classListContainer">
                     <a href="#" class="navBar__classesLink">Clases</a>
                     <ul class="navBar__category__classesList">
-                        <li><a href="./../clase01/clase01.html" >1 - Syntaxis y variables</a></li>
-                        <li><a href="./../clase02/clase02.html">2 - Control de flujos</a></li>
-                        <li><a href="./../clase03/clase03.html">3 - Ciclos/iteraciones</a></li>
-                        <li><a href="#" id="actualClassPage">4 - Programacion con funciones</a></li>
-                        <!-- <li><a href="#">5 - Objetos</a></li>
+                        <li><a href="./../clase01/clase01.html">1 - Variables</a></li>
+                        <li><a href="./../clase02/clase02.html">2 - If y Operadores</a></li>
+                        <li><a href="./../clase03/clase03.html">3 - Ciclos</a></li>
+                        <li><a href="#" id="actualClassPage">4 - Funciones</a></li>
+                        <li><a href="./../clase05/clase05.html">5 - Objetos</a></li>
                         <li><a href="#">6 - Arrays</a></li>
-                        <li><a href="#">7 - Funciones de orden superior</a></li>
+                        <!-- <li><a href="#">7 - Funciones de orden superior</a></li>
                         <li><a href="#">8 - DOM</a></li>
                         <li><a href="#">9 - Eventos</a></li>
                         <li><a href="#">10 - Storage y JSON</a></li>
@@ -62,7 +64,164 @@
             </div>
         </nav>
     </header>
-    <p>CLASE3</p>
+    <section class="sectionInfo">
+        <h3 class="upperTitle">Un poco de repaso</h3>
+        <div class="sectionInfo__block">
+            <h3 class="sectionInfo__block__title">Funciones</h3>
+            <p>Una función es un conjunto de intrucciones que realiza una tarea especifica y puede ser utilizado las
+                veces que quieramos</p>
+            <p>Las funciones nos permiten dividir nuestro codigo en pequeñas partes.</p>
+            <p>Para declararlas se usa la palabra reservada <span class="specialWord">function</span> seguido por el
+                nombre de la función,unos parentesis y el codigo que ejecuta entre llaves.</p>
+            <span class="sectionInfo__block__code">
+                <p><span class="specialWord">function </span> nombre<span class="specialWord">() {</span></p>
+                <span class="sectionInfo__block__code__sub">
+                    <p><span class="coment">// Codigo que ejecuta la funcion</span></p>
+                </span>
+                <p><span class="specialWord">)</span></p>
+                <p>nombre(); <span class="coment"> // Ejecuta la función</span></p>
+            </span>
+            <p>Las funciones pueden recibir valores para realizar sus operaciones, estos valores les son enviados cuando
+                las ejecutamos y reciben el nombre de <span class="specialWord">parametros</span>.</p>
+            <p>Cuando declaramos las funciones, dentro de los parentesis escribimos la cantidad de parametros que
+                recibe. Luego cuando ejecutamos, escribimos los valores de los parametros dentro de los parentesis.
+                Recordá enviar los valores de los parametros en el mismo orden que fueron declarados.</p>
+            <span class="sectionInfo__block__code">
+                <p><span class="specialWord">function </span> calcAreaRectangulo<span class="specialWord">( base, altura
+                        )
+                        {</span></p>
+                <span class="sectionInfo__block__code__sub">
+                    <p>let area = base * altura;</p>
+                    <p>console.log(`El area del rectangulo es ${area}`);</p>
+                </span>
+                <p><span class="specialWord">)</span></p>
+                <p>calcAreaRectangulo(4,2); <span class="coment"> // base==4 altura==2</span></p>
+            </span>
+            <p>De esta forma podemos armar funciones que cumplan distintos propositos, según los valores que le
+                enviemos.</p>
+            <p>Tambien las funciones funciones pueden devolver un valor, para hacerlo utiliza la palabra reservada <span
+                    class="specialWord">return</span>. Utilizando el return podemos crear funciones que realicen
+                operaciones especificas y usar el valor que devuelvan para realizar otras operaciones o mostrarlo. </p>
+            <p>Continuando con el ejemplo de los numeros pares, podemos hacer una función que devuelva si un numero es
+                par o no.</p>
+            <span class="sectionInfo__block__code">
+                <p><span class="specialWord">function </span> esPar<span class="specialWord">( num )
+                        {</span></p>
+                <span class="sectionInfo__block__code__sub">
+                    <p>let par = (num % 2) == 0 ; <span class="comment">// true si num es par</span></p>
+                    <p><span class="specialWord">return</span> par;</p>
+                </span>
+                <p><span class="specialWord">)</span></p>
+                <p>console.log( esPar(4) ); <span class="coment"> // true</span></p>
+                <p>console.log( esPar(7) ); <span class="coment"> // false</span></p>
+                <p>console.log( esPar(24) ); <span class="coment"> // true</span></p>
+            </span>
+            <span class="sectionInfo__block__list">
+                <ul>
+                    <li>Recuerda nombrar a las funciones con nombres simples que describan la tarea que realizan, usando
+                        camelCase.</li>
+                    <li>Recuerda definir las funciones en la cabecera del codigo.</li>
+                    <li>Las funciones deben realizar la operación que dicen realizar, no deben hacer operaciones extras.
+                        Por ejemplo: una función calcDescuento, solo deberia calcular el descuento y devolver su valor,
+                        no mostrarlo o hacer algo extra. Al valor del descuento lo mostramos fuera de la función.</li>
+                    <li>Una función puede tener varios <span class="specialWord">return</span>. Cuando se ejecuta
+                        alguno, la función finaliza devolviendo el valor de ese return. Se lo suele usar para devoler un
+                        valor según alguna condición que definamos.</li>
+                    <li>Recuerda que las funciones nos sirven para segmentar nuestro codigo en partes y de esta forma
+                        hacerlo más sencillo.</li>
+                </ul>
+            </span>
+            <p>*¿Quieres más sobre funciones? Aqui tenes su documentación:</p>
+            <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Functions" target="_blank">Funciones
+                javascript</a>
+            <a href="https://lenguajejs.com/javascript/fundamentos/funciones/" target="_blank"> Funciones</a>
+            <h4>Funciones Flecha</h4>
+            <p>Existe un tipo de funciones que se llaman <span class="specialWord">Funciones anonimas</span> que se
+                declaran sin nombre y se asignan a una variable, luego para usarla hacemos referencia a esa variable.
+            </p>
+            <span class="sectionInfo__block__code">
+                <p><span class="specialWord">const</span> esPar = <span class="specialWord">function </span>( <span
+                        class="specialWord">num </span>) {<span class="specialWord"> return </span>(num%2)===0 }</p>
+                <p><span class="specialWord">const</span> areaRectangulo = <span class="specialWord">function </span>(
+                    <span class="specialWord">base, altura </span>) {<span class="specialWord"> return </span>base *
+                    altura }
+                </p>
+                <p>console.log( esPar(4) ); <span class="coment">//true</span></p>
+                <p>console.log( areaRectangulo(4,2) ); <span class="coment">// 8</span></p>
+            </span>
+            <p>Las Funciones flechas o Arrow Functions, reciben el nombre de <span class="specialWord">funciones
+                    anonimas de sintaxis
+                    simplificada</span>. Se agregaron en la versión EM6 de js, y utilizan una <span class="specialWord">
+                    => </span> en lugar de la palabra function.</p>
+            <span class="sectionInfo__block__code">
+                <p><span class="specialWord">const</span> esPar <span class="specialWord"> = </span> ( <span
+                        class="specialWord">num </span>) <span class="specialWord"> => </span> { (num%2)===0 };</p>
+                <p><span class="specialWord">const</span> areaRectangulo <span class="specialWord"> = </span> ( <span
+                        class="specialWord">base, altura </span>) <span class="specialWord"> => </span> base*altura ;
+                </p>
+                <p>console.log( esPar(4) ); <span class="coment">//true</span></p>
+                <p>console.log( areaRectangulo(4,2) ); <span class="coment">// 8</span></p>
+            </span>
+            <p>El uso de las arrow functions tiene muchas ventajas.</p>
+            <span class="sectionInfo__block__list">
+                <ul>
+                    <li>Si el cuerpo de la función tiene una sola linea, se puede omitir las llaves { } y
+                        automaticamente se hace un return de esa linea por lo que se puede omitir escribir return.</li>
+                    <li>Si la función no tiene parametros se escribe así ( ) => { }.</li>
+                    <li>Si la función tiene solamente un parametros se lo puede indicar solamente por su nombre sin
+                        parentesis. Para el primer ejemplo sería: num => { }</li>
+                    <li>Las arrow functions hacen que el codigo sea mucho más legible y claro de escribir.</li>
+                    <li>En frameworks de js, como React, las arrow function se las usa mucho muchoo, te recomiendo
+                        aprenderlas.</li>
+                </ul>
+            </span>
+        </div>
+        <div class="sectionInfo__block">
+            <h3 class="sectionInfo__block__title">Scope</h3>
+            <p>El scope o alcance puede definirse como el alcance que tiene una variable dentro de tu codigo. El scope
+                decide a qué variables tienes acceso en cada parte del codigo. Existén 2 tipos de scope, el <span
+                    class="specialWord">local</span> y el <span class="specialWord">global</span>.</p>
+            <p>Se habla de <span class="specialWord">scope local</span> cuando solo se puede acceder a un variable
+                unicamente en cierta parte del codigo (dentro de una función o un bloque de codigo { } ). Estas
+                variables se llaman <span class="specialWord">variables locales</span>. Si tratas de acceder a una
+                variable local fuera de su ambito, tendrás un error que dice que la variable no está definida. </p>
+            <p>Se dice que una variable está en el <span class="specialWord">scope global</span> cuando está definida
+                fuera de una función o bloque de codigo. Estas variables son llamadas <span
+                    class="specialWord">variables globales</span> y puedes acceder a ellas desde cualquier parte del
+                codigo. </p>
+        </div>
+    </section>
+    <section class="sectionInfo">
+        <h3 class="upperTitle">Practica</h3>
+        <div class="sectionInfo__block">
+            <h3 class="sectionInfo__block__title">Editor online para que practiques</h3>
+            <iframe height="300" style="width: 100%;" scrolling="no" title="practica"
+                src="https://codepen.io/jorge_088/embed/preview/YzeMdyR?default-tab=html%2Cresult&editable=true&theme-id=dark"
+                frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/jorge_088/pen/YzeMdyR">
+                    practica</a> by Jorge (<a href="https://codepen.io/jorge_088">@jorge_088</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+        </div>
+        <div class="sectionInfo__block">
+            <h3 class="sectionInfo__block__title">Ejercicio 1</h3>
+            <span class="sectionInfo__block__practiceBtns">
+                <a href="https://codepen.io/jorge_088/pen/poaXVQE" target="_blank">Ver codigo</a>
+            </span>
+        </div>
+        <div class="sectionInfo__block">
+            <h3 class="sectionInfo__block__title">Ejercicio 2</h3>
+
+            <span class="sectionInfo__block__practiceBtns">
+                <a href="https://codepen.io/jorge_088/pen/dydBeBQ" target="_blank">Ver codigo</a>
+            </span>
+        </div>
+        <div class="sectionInfo__block">
+            <h3 class="sectionInfo__block__title">Más ejercicios</h3>
+            <p>Recuerda que en el Booklet hay más ejercicios para que puedas practicar.</p>
+        </div>
+    </section>
     <script src="./../../scripts/shared.js"></script>
 </body>
+
 </html>

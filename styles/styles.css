@@ -10,13 +10,14 @@ html {
 body {
     --principal: #fff;
     --backgroundBody: #f0f6f6;
-    --text: #222222;
+    --text: #1a1a1a;
     --text-star: #000;
-    --text-coment:rgb(63, 63, 63);
-    --secundary_opacity-star: #ffecd0;
+    --text-coment:rgb(82, 82, 82);
+    --secundary_opacity-star: #ffdfac;
     --secundary_hover: #ffc368;
     --secundary: #e98c00;
     --secundary_opacity: #ffd699;
+    --background-codeSpace: #e7e7e7;
     
     background-color: var(--backgroundBody);
     overflow-x: hidden;
@@ -29,7 +30,8 @@ body.dark {
     --backgroundBody: #393e41;
     --text: #dcd8d8;
     --text-star: #fff;
-    --text-coment: rgb(158, 158, 158);
+    --text-coment: rgb(182, 182, 182);
     --secundary_opacity-star: #5a6266;
     --secundary_hover: #dba656;
+    --background-codeSpace: #4c4d4e;
 }

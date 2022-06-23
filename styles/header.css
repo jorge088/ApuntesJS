@@ -65,7 +65,7 @@
 .navBar__category__classesList {
     position: absolute;
     font-size: .95em;
-    max-height: 180px;
+    max-height: 220px;
     overflow-y: scroll;
     display: flex;
     top: 100%;
