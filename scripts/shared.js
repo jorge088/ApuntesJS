@@ -15,17 +15,14 @@ const sunIcon = document.querySelector('#sunIcon');
 navBtnResponsive.addEventListener('click', () => {
     navCategorys.classList.toggle('show');
 });
-navClassesLink.addEventListener('click', (e) => {
-    e.preventDefault();
+navClassesLink.addEventListener('click', () => {
     navClassesList.classList.toggle('show');
 });
 navActualClassLink.addEventListener('click', (e) => {
     e.preventDefault();
 })
 
-document.addEventListener('DOMContentLoaded', () => {
-    checkLocalStorageTheme();
-});
+checkLocalStorageTheme();
 
 // Dark mode funcionality
 btnChangeTheme.addEventListener('click', () => {
