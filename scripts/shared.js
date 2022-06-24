@@ -15,7 +15,8 @@ const sunIcon = document.querySelector('#sunIcon');
 navBtnResponsive.addEventListener('click', () => {
     navCategorys.classList.toggle('show');
 });
-navClassesLink.addEventListener('click', () => {
+navClassesLink.addEventListener('click', (e) => {
+    e.preventDefault();
     navClassesList.classList.toggle('show');
 });
 navActualClassLink.addEventListener('click', (e) => {
