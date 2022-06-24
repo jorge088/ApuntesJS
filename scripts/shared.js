@@ -21,8 +21,10 @@ navClassesLink.addEventListener('click', () => {
 navActualClassLink.addEventListener('click', (e) => {
     e.preventDefault();
 })
+window.addEventListener('DOMContentLoaded', () => {
+    checkLocalStorageTheme();
+});
 
-checkLocalStorageTheme();
 
 // Dark mode funcionality
 btnChangeTheme.addEventListener('click', () => {
