@@ -26,7 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
     checkLocalStorageTheme();
 });
 
-
+console.log();
 // Dark mode funcionality
 btnChangeTheme.addEventListener('click', () => {
     body.classList.toggle('dark')

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="./../../icon.png">
-    
+
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,7 +41,7 @@
                         <li><a href="./../clase02/clase02.html">2 - If y Operadores</a></li>
                         <li><a href="./../clase03/clase03.html">3 - Ciclos</a></li>
                         <li><a href="./../clase04/clase04.html">4 - Funciones</a></li>
-                        <!-- <li><a href="#" id="actualClassPage">5 - Objetos</a></li> -->
+                        <li><a href="#" id="actualClassPage">5 - Objetos</a></li>
                         <!-- <li><a href="#">6 - Arrays</a></li> -->
                         <!-- <li><a href="#">7 - Funciones de orden superior</a></li>
                         <li><a href="#">8 - DOM</a></li>
@@ -71,13 +71,291 @@
     <section class="sectionInfo">
         <h3 class="upperTitle">Un poco de repaso</h3>
         <div class="sectionInfo__block">
-            <h3 class="sectionInfo__block__title"></h3>
+            <h3 class="sectionInfo__block__title">Objetos</h3>
+            <p>Un objeto es una colección de propiedades. Estas propiedades son una asociación entre un nombre (o clave)
+                y un valor (cualquier tipo de dato). El valor de una propiedad puede ser una función, en este caso la
+                propiedad se conoce como
+                metodo. Se puede decir que los objetos están compuestos por un listado de pares clave-valor.</p>
+            <p>Los objetos en js, y en varios lenguajes de programación, son el equivalente a objetos en la vida real:
+                <span class="specialWord">un objeto tiene propiedades y funcionalidades</span>.
+            </p>
+            <p>En javascript, los objetos están en casi todos los aspectos del lenguaje, practicamente todo es un
+                objeto. Por lo tanto, debemos comprenderlos.</p>
+            <p>En muchos lenguajes de programación, para crear un objeto se utiliza la palabra reservada <span
+                    class="specialWord">new</span>. En js también funciona: </p>
+            <span class="sectionInfo__block__code">
+                <p><span class="specialWord">const</span> objeto = <span class="specialWord">new Object()</span>; <span
+                        class="coment">// Esto crea un objeto 'genérico' vacío</span></p>
+                <span class="sectionInfo__block__code__sub">
+                </span>
+            </span>
+            <p>Sin embargo, siempre que se pueda, en js se prefiere utilizar lo que se conoce como los <span
+                    class="specialWord">objetos literales</span>, que es un metodo abreviado para crear objetos
+                directamente sin usar la palabra new.</p>
+            <p>Para crear un objeto literal, se usan las llaves { }.</p>
+            <span class="sectionInfo__block__code">
+                <p><span class="specialWord">const</span> objeto = <span class="specialWord">{ }</span>; <span
+                        class="coment">// Crea un objeto vacío</span></p>
+            </span>
+            <p>Dentro de las llaves, cada propiedad está separada por una <span class="specialWord">,</span> (la ultima
+                propiedad puede no llevar). Vamos a crear un objeto llamado 'producto', que tiene como propiedades a
+                'nombre', 'categoria' y 'precio'.</p>
+            <span class="sectionInfo__block__code">
+                <p><span class="specialWord">const</span> producto = <span class="specialWord">{</span></p>
+                <span class="sectionInfo__block__code__sub">
+                    <p>nombre : <span class="specialWord">"Camiseta selección Argentina"</span> ,</p>
+                    <p>categoria : <span class="specialWord">"Selección Argentina"</span> ,</p>
+                    <p>precio: <span class="specialWord">14000</span></p>
+                </span>
+                <p><span class="specialWord">}</span></p>
+            </span>
+            <span class="sectionInfo__block__list">
+                <ul>
+                    <li>La estructura de las propiedades es: "clave:valor".</li>
+                    <li>Tanto nombre de los objetos y de las propiedades son sencibles a mayusculas y minusculas.</li>
+                </ul>
+            </span>
+
+            <h4>Acceso a las propiedades</h4>
+            <p>Para acceder a las propiedades de un objeto existen dos formas, a través de la notación con <span
+                    class="specialWord">puntos</span> o a través de la notación con <span
+                    class="specialWord">corchetes</span>.</p>
+            <span class="sectionInfo__block__code">
+                <p><span class="coment">// Notación con puntos</span></p>
+                <span class="sectionInfo__block__code__sub">
+                    <p> <span class="specialWord">console.log</span>( productos.nombre ); <span class="coment">//
+                            Camiseta selección Argentina</span></p>
+                    <p><span class="specialWord">console.log</span>( productos.categoria ); <span class="coment">//
+                            Selección Argentina</span></p>
+                </span>
+                <br>
+                <p><span class="coment">// Notación con corchetes</span></p>
+                <span class="sectionInfo__block__code__sub">
+                    <p><span class="specialWord">console.log</span>( productos["nombre"] ); <span class="coment">//
+                            Camiseta
+                            selección Argentina</span></p>
+                    <p><span class="specialWord">console.log</span>( productos["precio"] ); <span class="coment">//
+                            14000</span></p>
+                </span>
+            </span>
+            <h4>Modificar las propiedades</h4>
+            <p>Para establecer o cambiar los valores de las propiedades se utiliza las mismas notaciones mencionadas.
+            </p>
+            <span class="sectionInfo__block__code">
+                <p><span class="coment">// Notación con puntos</span></p>
+                <span class="sectionInfo__block__code__sub">
+                    <p>productos.nombre = "Camiseta Boca Juniors" ;</p>
+                    <p>productos.categoria = "Futbol" ;</p>
+                </span>
+                <br>
+                <p><span class="coment">// Notación con corchetes</span></p>
+                <span class="sectionInfo__block__code__sub">
+                    <p>productos["nombre"] = "Camiseta Boca Juniors"</p>
+                    <p>productos["precio"] = "Futbol"</p>
+                </span>
+            </span>
+            <span class="sectionInfo__block__list">
+                <ul>
+
+                    <li>Ambas notaciones funcionan de igual manera y puedes usar la que más te guste. La más utilizada
+                        en js es la notación con puntos.</li>
+                </ul>
+            </span>
+            <p>Te dejo un ejemplo de cuando podria usarse la notación con corchetes:</p>
+            <span class="sectionInfo__block__code">
+                <p><span class="specialWord">const</span> producto = <span class="specialWord">{</span></p>
+                <span class="sectionInfo__block__code__sub">
+                    <p>nombre : <span class="specialWord">"Campera de lluvia Adidas"</span> ,</p>
+                    <p>categoria : <span class="specialWord">"Camperas"</span> ,</p>
+                    <p>precio: <span class="specialWord">18000</span></p>
+                </span>
+                <p><span class="specialWord">}</span></p>
+
+                <p><span class="specialWord">let</span> llave = prompt("¿Que te gustaria saber del producto?")</p>
+                <p><span class="coment">// acceso por medio de la clave usando corchetes</span></p>
+                <p>alert( producto[<span class="specialWord"> llave </span>] );</p>
+                <p><span class="coment">si ingresa "nombre", se muestra "Campera de lluvia Adidas"</span></p>
+                <p><span class="coment">si ingresa "precio", se muestra 18000</span></p>
+            </span>
+            <span class="sectionInfo__block__list">
+                <ul>
+                    <li>En el ejemplo anterior, usando la notación con puntos no nos habria funcionado.</li>
+                </ul>
+            </span>
+
+            <h4>Metodos</h4>
+            <p>Se mencionó que las propiedades que tienen una función asignada se conocen como <span
+                    class="specialWord">metodos</span>, entonces, un metodo es una propiedad de un objeto que es una
+                función. Los metodos son basicamente iguales a una función, con la diferencia de que solo pueden ser
+                ejecutados dentro del mismo objeto.</p>
+            <span class="sectionInfo__block__code">
+                <p><span class="specialWord">const</span> telefono = <span class="specialWord">{</span></p>
+                <span class="sectionInfo__block__code__sub">
+                    <p>nombre : <span class="specialWord">"Galaxy J6"</span> ,</p>
+                    <p>marca : <span class="specialWord">"Samsung"</span> ,</p>
+                    <p>encendido : <span class="specialWord">true</span>,</p>
+                    <p>apagar : <span class="specialWord"> function ( ) { this</span>.encendido = false <span
+                        class="specialWord">}</span> , <span class="coment"> // Función anonima, utiliza this para
+                        actualizar el valor de la propiedad encendido</span></p>
+                    <p>encender : <span class="specialWord"> function ( ) { this</span>.encendido = true <span
+                            class="specialWord">}</span> , </p>
+                    <p>estaEncendido : <span class="specialWord"> function ( ) { </span>console.log(this.encendido)
+                        <span class="specialWord">}</span> , <span class="coment"> // muestra el valor de la propiedad
+                            encendido</span>
+                    </p>
+                </span>
+                <p><span class="specialWord">}</span></p>
+
+                <p>telefono.estaEncendido() ; <span class="coment">//Ejecuta la funcion estaEncendido, muestra
+                        true</span></p>
+                <p>telefono.apagar()<span class="coment">//ejecuto el metodo apagar</span></p>
+                <p>telefono.estaEncendido() ; <span class="coment">//false</span></p>
+            </span>
+            <p>Para hacer metodos usamos la palabra <span class="specialWord">function</span>, pero ¿Y las arrow functions? </p>
+            <p>Bueno, simplemente para crear metodos en objetos literales no podes usar las arrow functions. Si quieres leer una explicación de del porque, te dejo un link (en ingles):</p>
+            <a href="https://dmitripavlutin.com/when-not-to-use-arrow-functions-in-javascript/" target="_blank">Whe not use arrow functions in javascript</a>
+            <h4>Función Constructor</h4>
+            <p>Como alternativa, podes usar la función <span class="specialWord">constructor</span> para crear objetos.
+                Para hacerlo debes definir el tipo de objeto usando una función constructora, luego para crear un objeto
+                de ese tipo se usa el operador <span class="specialWord">new</span> (se crea una instancia de ese
+                objeto).</p>
+            <p>Para definir un tipo de objeto, tenes que crear una función para el objeto que especifique su
+                nombre(primera letra con mayuscula), propiedades y metodos. Ejemplo voy a definir un objeto llamado
+                'Producto': </p>
+            <span class="sectionInfo__block__code">
+                <p><span class="coment">// Función contructora</span></p>
+                <p><span class="specialWord">function</span> Producto(nombre, categoria, precio) <span
+                        class="specialWord">{</span></p>
+                <span class="sectionInfo__block__code__sub">
+                    <p><span class="specialWord">this</span>.nombre = nombre;</p>
+                    <p><span class="specialWord">this</span>.categoria = categoria;</p>
+                    <p><span class="specialWord">this</span>.precio = precio;</p>
+                    <p><span class="specialWord">this</span>.mostrarDetalle = <span class="specialWord">( ) =>
+                        </span>console.log( `Nombre: ${ this.nombre }, Categoria: ${ this.categoria }, Precio: ${
+                        this.precio }` ) ; <span class="coment">// metodo, muestra en consola un texto con la
+                            información del objeto</span></p>
+                </span>
+                <p><span class="specialWord">}</span></p>
+                <br>
+                <p><span class="coment">// Creo 3 objetos del tipo Producto,envio como parametros de la función los
+                        valores de las propiedades del objeto.</span></p>
+                <p><span class="specialWord">let</span> producto1 = <span class="specialWord">new Producto(</span>
+                    "Camiseta Selección Argentina", "Seleccion Argentina", 14000 <span class="specialWord">)</span>;</p>
+                <p><span class="specialWord">let</span> producto2 = <span class="specialWord">new Producto(</span>
+                    "Camiseta Boca Juniors", "Futbol", 12000 <span class="specialWord">)</span>;</p>
+                <p><span class="specialWord">let</span> producto3 = <span class="specialWord">new Producto(</span>
+                    "Camiseta River Plate", "Futbol", 12000 <span class="specialWord">)</span>;</p>
+                <p>producto2.mostrarDetalle( ); <span class="coment">// muestra "Nombre: Camiseta Boca Juniors,
+                        Categoria:
+                        Futbol, Precio: $12000"</span></p>
+            </span>
+            <p>La palabra <span class="specialWord">this</span> se usa para asignar los valores a las propiedades del
+                objeto. La palabra this está enlazada con el nuevo objeto instanciado. Para nuestro ejemplo this se
+                enlaza con los nuevos objetos 'producto1','producto2' y 'producto3', de esta forma les asigna sus
+                valores correspondientes.</p>
+                <p>Si quieres leer más de this: </p>
+                <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/this" target="_blank">This</a>
+            <h4>Más Info</h4>
+
+            <p>Puedes ver este video sobre objetos: </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/rf3riernYms"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <p>Si querés leer más sobre objetos, te dejo estos links:</p>
+            <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Working_with_Objects"
+                target="_blank">Trabajando con objetos</a>
+            <a href="https://lenguajejs.com/javascript/fundamentos/objetos-basicos/" target="_blank">¿Que son los
+                objetos?</a>
+            <a href="https://es.javascript.info/object" target="_blank">Objetos</a>
+        </div>
+
+        <div class="sectionInfo__block">
+            <h3 class="sectionInfo__block__title">Clases</h3>
+            <p>Las clases fueron introducidas en la versión de ES6, y lo que hacen es proveer una sintaxis mucho más
+                clara y sencilla para crear objetos.
+            <p>Para definir una clase, se realiza una declaración de clase. Para declarar una clase se utiliza la
+                palabra reservada <span class="specialWord">class</span> y seguido, un nombre para la clase. Dentro de
+                las llaves, se definen los metodos y el constructor de la clase.</p>
+            </p>
+            <span class="sectionInfo__block__code">
+                <p><span class="specialWord">class</span> Producto<span class="specialWord"> {</span></p>
+                <span class="sectionInfo__block__code__sub">
+                    <p><span class="specialWord">constructor</span>(nombre, categoria, precio) <span
+                            class="specialWord"> { </span></p>
+                    <span class="sectionInfo__block__code__sub">
+                        <p><span class="specialWord">this</span>.nombre = nombre;</p>
+                        <p><span class="specialWord">this</span>.categoria = categoria;</p>
+                        <p><span class="specialWord">this</span>.precio = precio;</p>
+                    </span>
+                    <p><span class="specialWord">}</span></p>
+                    <br>
+                    <p><span class="specialWord">mostrarDetalle</span>( ) <span class="specialWord">{</span></p>
+                    <span class="sectionInfo__block__code__sub">
+                        <p>console.log( `Nombre: ${ this.nombre }, Categoria: ${ this.categoria }, Precio: ${
+                            this.precio }` ) ;</p>
+                    </span>
+                    <p><span class="specialWord">}</span></p>
+
+                </span>
+                <p><span class="specialWord">}</span></p>
+                <br>
+            </span>
+            <p>La función constructora que conociamos, es reemplazada por el <span class="specialWord">metodo
+                    contructor</span> que cumple el mismo proposito de la función constructora. Recibe por parametros
+                los valores que le vamos a asignar a las propiedades del objeto.</p>
+            <p>Todos los metodos que tenga el objeto se declaran sin utilizar la palabra <span
+                    class="specialWord">function</span>.</p>
+            <p>Cuando quieramos crear un objeto usando una clase, se utiliza la palabra <span
+                    class="specialWord">new</span>.</p>
+            <span class="sectionInfo__block__code">
+                <p><span class="specialWord">let</span> producto1 = <span class="specialWord">new Producto</span>(
+                    "Camiseta Seleccion Argentina", "Seleccion Argentina", 14000 ) ;</p>
+            </span>
+            <span class="sectionInfo__block__list">
+                <ul>
+
+                    <li>Las clases nos ofrecen una forma más sencilla y ordenada para crear nuestros objetos.</li>
+                    <li>Recuerda que el nombre de las clases inicia con mayusculas(Producto, Animal, Alumno, etc.).</li>
+                    <li>Puedes pensar que son como una plantilla que contienen las propiedades y caracteristicas de un objeto.</li>
+                </ul>
+            </span>
+            <p>Si quieres leer un poco más sobre clases:</p>
+            <a href="https://es.javascript.info/class" target="_blank"> Sintaxis basica de class.</a>
+        </div>
+    </section>
+    <section class="sectionInfo">
+        <h3 class="upperTitle">Practica</h3>
+        <div class="sectionInfo__block">
+            <h3 class="sectionInfo__block__title">Editor online para que practiques</h3>
+            <iframe height="300" style="width: 100%;" scrolling="no" title="practica"
+                src="https://codepen.io/jorge_088/embed/preview/YzeMdyR?default-tab=html%2Cresult&editable=true&theme-id=dark"
+                frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/jorge_088/pen/YzeMdyR">
+                    practica</a> by Jorge (<a href="https://codepen.io/jorge_088">@jorge_088</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+        </div>
+        <div class="sectionInfo__block">
+            <h3 class="sectionInfo__block__title">Ejercicio 1</h3>
+            <p>Definir un objeto literal de nombre 'deportista', que tiene las siguientes propiedades nombre, energia (inicia en 50), experiencia (inicia en 0).</p>
+            <p>Queremos pedirle al deportista que entrene, para eso tiene que tener un metodo de nombre 'entrenarHoras'. El metodo entrenarHoras recibe por parametro la cantidad de horas que va a entrenar. Luego le resta la energia al deportista la cantidad horas X5, e incrementa la experiencia la cantidad de horas X2. Agregar un control si al actualizar la energia del deportista es menor o igual a cero, mostrar un alerta con el mensaje 'El deportista está cansado para entrenar tanto! Elige menos horas' y no realiza acciones.</p>
+            <p>También queremos que el deportista descanse y recargue su energia. Para eso tiene que tener un metodo llamado 'descansar', que lo que hace es actualiza la energia del deportista a 50(valor maximo).</p>
+            <p>Luego de definir el objeto literal, probar las funciones y comprobar que los valores se actualicen correctamente.</p>
+            <span class="sectionInfo__block__practiceBtns">
+                <a href="https://codepen.io/jorge_088/pen/LYdPMGN" target="_blank">Ver codigo</a>
+            </span>
+        </div>
+        <div class="sectionInfo__block">
+            <h3 class="sectionInfo__block__title">Más ejercicios</h3>
+            <p>Recuerda que en el Booklet hay más ejercicios para que puedas practicar.</p>
         </div>
     </section>
     <footer class="footer">
         <div class="footer__container">
             <p>Jorge Mendez</p>
-            <a href="https://www.linkedin.com/in/jorge-n-mendez/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/jorge-n-mendez/" target="_blank"><i
+                    class="fa-brands fa-linkedin"></i></a>
             <a href="https://github.com/jorge088" target="_blank"><i class="fa-brands fa-github"></i></a>
 
         </div>

@@ -86,6 +86,7 @@
 
 .coment {
     color: var(--text-coment);
+    font-size: .95em;
 }
 
 .sectionInfo__block__list {
@@ -121,7 +122,7 @@
     }
 
     .sectionInfo__block iframe {
-        width: 500px;
-        height: 280px;
+        width: 700px;
+        height: 400px;
     }
 }
